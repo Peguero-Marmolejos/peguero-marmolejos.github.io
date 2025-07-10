@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emily the Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" >
+</head>
+<body>
+  <div id="dark-mode-toggle" class="dark-toggle">
+    <label class="switch">
+      <input type="checkbox" id="toggle-dark-mode">
+      <span class="slider round"></span>
+    </label>
+  </div>
+  <header class="site-header uni-theme">
+    <div class="branding">
+      <h1>Emily Peguero Marmolejos</h1>
+      <h2>Software Developer</h2>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#projects">Featured Portfolio</a></li>
+        <li><a href="#contact-me">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article id="introduction" data-aos="fade-up">
+      <h3>Introduction</h3>
+      <img src="assets/images/me.jpg" alt="Emily Peguero Marmolejos - Software Developer" class="circular" width="275" />
+      <p data-aos="fade-up" data-aos-delay="100">Emily here, a software developer with an affinity for mathematics, logic-based problem solving, philosophy, poetry, and physics.</p>
+      <p data-aos="fade-up" data-aos-delay="200">Born and raised in New York City, now based in Fargo, ND.</p>
+    </article>
+
+    <article id="about-me" data-aos="fade-up">
+      <h3>About Me</h3>
+      <p data-aos="fade-up" data-aos-delay="400">Let's play chess! I react to a good chess game the way most people react to a great boxing match.</p>
+      <p data-aos="fade-up" data-aos-delay="500">Collaboration inspires me. I enjoy working with teams and uplifting others.</p>
+      <p data-aos="fade-up" data-aos-delay="600">I'm logical (I minored in math), but my colorful life taught me the value of human connection.</p>
+    </article>
+
+    <article id="projects" data-aos="fade-up">
+      <h3>Featured Portfolio</h3>
+      
+      <!-- Spotify Album Art Viewer - WITH DEMO (NO LIVE DEMO BUTTON) -->
+      <div class="project-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-visual">
+          <img src="assets/images/projects/spotify-demo.gif" alt="Spotify Album Art Viewer Demo" class="project-demo" />
+          <div class="project-overlay">
+            <button class="demo-btn" onclick="openModal('spotify-modal')">View Demo</button>
+          </div>
+        </div>
+        <div class="project-content">
+          <h4>Spotify Album Art Viewer</h4>
+          <p>Interactive web application using Spotify API with OAuth 2.0 authentication to display album artwork from searched artists. Features real-time search, responsive grid layout, and smooth animations.</p>
+          <div class="project-links">
+            <a href="https://github.com/peguero-marmolejos/Spotify-Album-Art" target="_blank">GitHub</a>
+            <!-- Removed Live Demo button -->
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Spotify API</span>
+            <span class="tech-tag">OAuth 2.0</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">CSS Grid</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stars and Headlines - PLACEHOLDER -->
+      <div class="project-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-visual">
+          <div class="demo-placeholder">
+            🌟
+            <div class="coming-soon">Demo Coming Soon</div>
+          </div>
+          <div class="project-overlay">
+            <button class="demo-btn" onclick="openModal('stars-modal')">View Details</button>
+          </div>
+        </div>
+        <div class="project-content">
+          <h4>Stars and Headlines</h4>
+          <p>Multi-API application combining NASA's Astronomy Picture of the Day with NY Times headlines. Demonstrates API integration, date selection, and beautiful astronomy image display with corresponding news.</p>
+          <div class="project-links">
+            <a href="https://github.com/peguero-marmolejos/Stars-and-Headlines" target="_blank">GitHub</a>
+            <!-- Removed Live Demo button -->
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">NASA API</span>
+            <span class="tech-tag">NY Times API</span>
+            <span class="tech-tag">Date Picker</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Love Movies Backend - PLACEHOLDER -->
+      <div class="project-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-visual">
+          <div class="demo-placeholder">
+            🎬
+            <div class="coming-soon">Demo Coming Soon</div>
+          </div>
+          <div class="project-overlay">
+            <button class="demo-btn" onclick="openModal('movies-modal')">View Details</button>
+          </div>
+        </div>
+        <div class="project-content">
+          <h4>Love Movies Backend</h4>
+          <p>RESTful API backend for a movie review application. Features PostgreSQL database integration with Knex.js for query building, CRUD operations, and data validation middleware.</p>
+          <div class="project-links">
+            <a href="https://github.com/peguero-marmolejos/LoveMoviesBackEnd" target="_blank">GitHub</a>
+            <!-- Removed Live Demo button -->
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Knex.js</span>
+            <span class="tech-tag">RESTful API</span>
+            <span class="tech-tag">CORS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GrubDash - PLACEHOLDER -->
+      <div class="project-item" data-aos="fade-up" data-aos-delay="400">
+        <div class="project-visual">
+          <div class="demo-placeholder">
+            🍕
+            <div class="coming-soon">Demo Coming Soon</div>
+          </div>
+          <div class="project-overlay">
+            <button class="demo-btn" onclick="openModal('grub-modal')">View Details</button>
+          </div>
+        </div>
+        <div class="project-content">
+          <h4>GrubDash Food Delivery</h4>
+          <p>Full-stack food delivery application with comprehensive order management system. Implements CRUD operations, order status tracking, and dynamic menu management with validation.</p>
+          <div class="project-links">
+            <a href="https://github.com/peguero-marmolejos/GrubDash" target="_blank">GitHub</a>
+            <!-- Removed Live Demo button -->
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">RESTful API</span>
+            <span class="tech-tag">Data Validation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Airport Simulation - PLACEHOLDER -->
+      <div class="project-item" data-aos="fade-up" data-aos-delay="500">
+        <div class="project-visual">
+          <div class="demo-placeholder">
+            ✈️
+            <div class="coming-soon">Demo Coming Soon</div>
+          </div>
+          <div class="project-overlay">
+            <button class="demo-btn" onclick="openModal('airport-modal')">View Details</button>
+          </div>
+        </div>
+        <div class="project-content">
+          <h4>Airport Simulation System</h4>
+          <p>Multi-threaded Java application simulating complex airport operations with client-server architecture. Demonstrates advanced programming concepts, concurrent processing, and real-time simulation.</p>
+          <div class="project-links">
+            <a href="https://github.com/peguero-marmolejos/Airport-Simulation" target="_blank">GitHub</a>
+            <!-- Removed Live Demo button -->
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Multithreading</span>
+            <span class="tech-tag">Client-Server</span>
+            <span class="tech-tag">Swing GUI</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article id="contact-me" data-aos="fade-up">
+      <h3>Contact</h3>
+      <ul class="contact-list">
+        <li data-aos="fade-up" data-aos-delay="850"><a href="https://www.linkedin.com/in/peguero-marmolejos/" target="_blank">LinkedIn</a></li>
+        <li data-aos="fade-up" data-aos-delay="900"><a href="https://github.com/peguero-marmolejos" target="_blank">GitHub</a></li>
+        <li data-aos="fade-up" data-aos-delay="950"><a href="mailto:erpegueromarmolejos@gmail.com?subject=Let's%20Talk">Email Me</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <!-- PROJECT MODALS -->
+  
+  <!-- Spotify Modal - WITH DEMO (NO LIVE DEMO LINK) -->
+  <div id="spotify-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('spotify-modal')">&times;</span>
+      <h3>Spotify Album Art Viewer</h3>
+      <div class="modal-demo">
+        <img src="assets/images/projects/spotify-demo.gif" alt="Full Spotify Demo" />
+        <div class="demo-description">
+          <h4>Key Features:</h4>
+          <ul>
+            <li>OAuth 2.0 authentication with Spotify</li>
+            <li>Real-time artist search functionality</li>
+            <li>Responsive grid layout for album artwork</li>
+            <li>Smooth hover animations and transitions</li>
+            <li>Error handling for API requests</li>
+            <li>Beautiful, modern UI design</li>
+            <li>Image caching and optimization</li>
+          </ul>
+          <div class="demo-links">
+            <a href="https://github.com/peguero-marmolejos/Spotify-Album-Art" target="_blank">View Code</a>
+            <!-- Removed live demo link -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stars and Headlines Modal -->
+  <div id="stars-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('stars-modal')">&times;</span>
+      <h3>Stars and Headlines</h3>
+      <div class="modal-demo">
+        <div class="demo-placeholder" style="height: 300px; border-radius: 12px;">
+          🌟
+        </div>
+                  <div class="demo-description">
+          <h4>Key Features:</h4>
+          <ul>
+            <li>NASA Astronomy Picture of the Day API integration</li>
+            <li>NY Times Top Stories API integration</li>
+            <li>Interactive date picker for historical images</li>
+            <li>Responsive image gallery with descriptions</li>
+            <li>Cross-API data correlation by date</li>
+          </ul>
+          <div class="demo-links">
+            <a href="https://github.com/peguero-marmolejos/Stars-and-Headlines" target="_blank">View Code</a>
+            <a href="#" target="_blank">Demo Coming Soon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Love Movies Backend Modal -->
+  <div id="movies-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('movies-modal')">&times;</span>
+      <h3>Love Movies Backend API</h3>
+      <div class="modal-demo">
+        <div class="demo-placeholder" style="height: 300px; border-radius: 12px;">
+          🎬
+        </div>
+        <div class="demo-description">
+          <h4>API Endpoints:</h4>
+          <ul>
+            <li>GET /movies - Retrieve all movies with filtering</li>
+            <li>GET /movies/:id - Get specific movie details</li>
+            <li>POST /movies - Create new movie entries</li>
+            <li>PUT /movies/:id - Update existing movies</li>
+            <li>DELETE /movies/:id - Remove movies from database</li>
+          </ul>
+          <div class="demo-links">
+            <a href="https://github.com/peguero-marmolejos/LoveMoviesBackEnd" target="_blank">View Code</a>
+            <a href="#" target="_blank">Demo Coming Soon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GrubDash Modal -->
+  <div id="grub-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('grub-modal')">&times;</span>
+      <h3>GrubDash Food Delivery</h3>
+      <div class="modal-demo">
+        <div class="demo-placeholder" style="height: 300px; border-radius: 12px;">
+          🍕
+        </div>
+        <div class="demo-description">
+          <h4>Key Features:</h4>
+          <ul>
+            <li>Complete order management system</li>
+            <li>Dynamic dish creation and editing</li>
+            <li>Order status tracking (pending, preparing, delivering)</li>
+            <li>Data validation and error handling</li>
+            <li>RESTful API architecture</li>
+          </ul>
+          <div class="demo-links">
+            <a href="https://github.com/peguero-marmolejos/GrubDash" target="_blank">View Code</a>
+            <a href="#" target="_blank">Demo Coming Soon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Airport Simulation Modal -->
+  <div id="airport-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('airport-modal')">&times;</span>
+      <h3>Airport Simulation System</h3>
+      <div class="modal-demo">
+        <div class="demo-placeholder" style="height: 300px; border-radius: 12px;">
+          ✈️
+        </div>
+        <div class="demo-description">
+          <h4>Key Features:</h4>
+          <ul>
+            <li>Multi-threaded client-server architecture</li>
+            <li>Real-time flight scheduling and management</li>
+            <li>Concurrent passenger and aircraft processing</li>
+            <li>Java Swing GUI for visualization</li>
+            <li>Thread-safe data structures and synchronization</li>
+          </ul>
+          <div class="demo-links">
+            <a href="https://github.com/peguero-marmolejos/Airport-Simulation" target="_blank">View Code</a>
+            <a href="#" target="_blank">Demo Coming Soon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="uni-theme">
+    © Emily Peguero Marmolejos — Software Developer
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
